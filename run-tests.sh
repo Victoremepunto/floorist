@@ -158,7 +158,7 @@ ARTIFACTS_DIR="$WORKSPACE/artifacts"
 mkdir -p "$ARTIFACTS_DIR"
 
 create_env_file || exit 1
-docker cp "$TESTS_ENV_FILE" "$TEST_CONTAINER_ID:/opt/app-root/tests/env.yaml"
+docker cp "$TESTS_ENV_FILE" "$TEST_CONTAINER_ID:./tests/env.yaml"
 
 # tests
 echo '===================================='
